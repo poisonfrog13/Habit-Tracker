@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 from rest_framework.validators import UniqueValidator
 from server.apps.authentication.validators import include_digit, include_upper_letter
-from server.apps.habit_tracker.serializers import DynamicFieldsModelSerializer
+from server.apps.core.serializers import DynamicFieldsModelSerializer
 
 class NewUserSerializer(serializers.ModelSerializer):
     class Meta:
