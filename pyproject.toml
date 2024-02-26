@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.11"
 django = "^5.0.2"
 djangorestframework = "^3.14.0"
+fernet = "^1.0.1"
+cryptography = "^42.0.5"
 
 
 [build-system]
