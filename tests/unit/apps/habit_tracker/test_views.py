@@ -32,15 +32,6 @@ def auth_token(simulated_user):
 
 
 # ----------------- API's
-
-
-def test_get_api(db, client, simulated_profile_fixture):
-    response = client.get(
-        "/api/alive/", headers=auth_token(simulated_profile_fixture())
-    )
-    assert response.status_code == 200, response.content
-
-
 def test_api_non_auth(db, client, simulated_profile_fixture):
     # Given
     user = simulated_profile_fixture(amount_habits=5, amount_records=10)

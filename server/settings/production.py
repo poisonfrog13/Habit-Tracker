@@ -34,6 +34,7 @@ ALLOWED_HOSTS += [  # noqa: F405
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 DEVELOP = False
+DEBUG = False
 
 print(
     f"DJANGO SETTINGS | {SETTINGS_MODULE=} | {DEVELOP=}, {DEBUG=}"  # noqa: F405

@@ -57,7 +57,7 @@ def sign_up(request, format=None):
 
 
 @api_view(['GET'])
-def who_am_I(request, format=None):
+def who_am_i(request, format=None):
     serializer = UserSerializer(request.user)
     return Response(serializer.data, status=status.HTTP_200_OK)
 

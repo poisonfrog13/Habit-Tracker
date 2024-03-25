@@ -16,7 +16,23 @@ faker = "^24.3.0"
 factory-boy = "^3.3.0"
 pytest = "^8.1.1"
 pytest-factoryboy = "^2.7.0"
+pytest-django = "^4.8.0"
 
+
+[tool.pytest.ini_options] # https://docs.pytest.org/en/stable/customize.html#pyproject-toml
+pythonpath = ["."]
+miniversion = "6.0"
+testpaths = ["tests"]
+
+# Use different settings while testing compared to production
+DJANGO_SETTINGS_MODULE = "server.settings.test"
+addopts = [
+    "--disable-pytest-warnings",
+    "--color=yes",
+    "--ds=server.settings.test",    
+]
+
+markers = []
 
 [build-system]
 requires = ["poetry-core"]
