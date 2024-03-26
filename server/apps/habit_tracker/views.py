@@ -25,14 +25,13 @@ class HabitsList(APIView):
         serializer = HabitSerializer(
             habits, many=True, fields=("id", "user", "name", "unit")
         )
-        print(request.user)
         return Response(
             serializer.data,
             status=status.HTTP_200_OK if habits else status.HTTP_204_NO_CONTENT,
         )
 
     def post(self, request, format=None):
-        data = request.data.dict()
+        data = {k:v for k, v in request.data.items()}
         data["user"] = request.user.pk
         serializer = CreateHabitSerializer(data=data)
         if serializer.is_valid(raise_exception=True):
