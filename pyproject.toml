@@ -17,6 +17,7 @@ factory-boy = "^3.3.0"
 pytest = "^8.1.1"
 pytest-factoryboy = "^2.7.0"
 pytest-django = "^4.8.0"
+ipython = "^8.22.2"
 
 
 [tool.pytest.ini_options] # https://docs.pytest.org/en/stable/customize.html#pyproject-toml

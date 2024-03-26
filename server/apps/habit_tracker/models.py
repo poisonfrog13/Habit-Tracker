@@ -24,7 +24,7 @@ class HabitUnit(models.Model):
     )
 
     def __str__(self):
-        return f"{self.name} = {self.type}"
+        return f"{self.name} ({self.type})"
 
 
 class Habit(models.Model):
